@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mmX-Ft-2J7">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="fSt-OA-VVI">
+            <objects>
+                <viewController id="mmX-Ft-2J7" customClass="ViewController" customModule="watchTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3i4-GF-sAS"/>
+                        <viewControllerLayoutGuide type="bottom" id="fKD-5C-LqQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c7N-rB-Sgx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="bl5-CP-OG7">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="BOs-3h-7e0" customClass="StockCell" customModule="watchTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BOs-3h-7e0" id="gfv-AB-lnm">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVP-8B-dhh">
+                                                    <rect key="frame" x="548" y="12" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZxY-tm-Wbs">
+                                                    <rect key="frame" x="25" y="10" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZxY-tm-Wbs" firstAttribute="leading" secondItem="gfv-AB-lnm" secondAttribute="leading" constant="25" id="Orx-kx-ENm"/>
+                                                <constraint firstItem="pVP-8B-dhh" firstAttribute="top" secondItem="gfv-AB-lnm" secondAttribute="top" constant="12" id="RSz-4Q-jnm"/>
+                                                <constraint firstItem="ZxY-tm-Wbs" firstAttribute="top" secondItem="gfv-AB-lnm" secondAttribute="top" constant="10" id="oJZ-mf-Ubm"/>
+                                                <constraint firstAttribute="trailing" secondItem="pVP-8B-dhh" secondAttribute="trailing" constant="10" id="xbO-hz-iKx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="ZxY-tm-Wbs" id="Uip-Ii-OSh"/>
+                                            <outlet property="priceLabel" destination="pVP-8B-dhh" id="oi2-6L-zeB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="mmX-Ft-2J7" id="CpA-jY-J3c"/>
+                                    <outlet property="delegate" destination="mmX-Ft-2J7" id="k7w-h0-oRf"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bl5-CP-OG7" firstAttribute="leading" secondItem="c7N-rB-Sgx" secondAttribute="leading" id="Biq-hZ-nMo"/>
+                            <constraint firstAttribute="trailing" secondItem="bl5-CP-OG7" secondAttribute="trailing" id="NJ7-Vm-ARf"/>
+                            <constraint firstItem="bl5-CP-OG7" firstAttribute="top" secondItem="c7N-rB-Sgx" secondAttribute="top" id="VT0-8V-pQC"/>
+                            <constraint firstItem="fKD-5C-LqQ" firstAttribute="top" secondItem="bl5-CP-OG7" secondAttribute="bottom" id="rmg-wA-blB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="bl5-CP-OG7" id="aTz-pO-Xe1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BTq-dS-ETZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="725" y="627"/>
+        </scene>
+    </scenes>
+</document>
