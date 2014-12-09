@@ -20,9 +20,6 @@ class InterfaceController: WKInterfaceController {
 
     @IBAction func refresh() {
         loadTableData()
-        
-       let button = WKInterfaceButton()
-
     }
     
     override init(context: AnyObject?) {
