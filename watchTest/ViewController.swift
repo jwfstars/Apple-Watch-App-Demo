@@ -53,7 +53,7 @@ class StockCell : UITableViewCell {
         nameLabel.text = stock.stockName
         priceLabel.text = "\(stock.price)"
         
-        if stock.statusUP == true {
+        if stock.isUP == true {
             priceLabel.textColor = UIColor.redColor()
         }else {
             priceLabel.textColor = UIColor.greenColor()

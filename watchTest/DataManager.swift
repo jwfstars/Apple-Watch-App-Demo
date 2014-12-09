@@ -77,7 +77,7 @@ class Stock: NSObject {
     
     var stockName : String = ""
     var price : Double = 0.0
-    var statusUP : Bool = false
+    var isUP : Bool = false
     var updown : Double = 0
     
     init(dict : NSDictionary) {
@@ -91,7 +91,7 @@ class Stock: NSObject {
         updown = dict["updown"] as Double
 
         if updown >= 0 {
-            statusUP = true
+            isUP = true
         }
     }
     

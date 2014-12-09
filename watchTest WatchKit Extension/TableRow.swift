@@ -22,7 +22,7 @@ class TableRow: NSObject {
         priceLabel.setText("\(stock.price)")
 
         //image位置不同方法不同
-        if stock.statusUP == true {
+        if stock.isUP == true {
             image.setImageNamed("arrow_red")
             priceLabel.setTextColor(UIColor.redColor())
         }else {
