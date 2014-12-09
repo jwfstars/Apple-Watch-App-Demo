@@ -20,6 +20,9 @@ class InterfaceController: WKInterfaceController {
 
     @IBAction func refresh() {
         loadTableData()
+        
+       let button = WKInterfaceButton()
+
     }
     
     override init(context: AnyObject?) {
@@ -43,19 +46,10 @@ class InterfaceController: WKInterfaceController {
             
             for (index,stock) in enumerate(self.stockItemArray) {
                 let row = self.table.rowControllerAtIndex(index) as TableRow
+                
                 let stock = stock as Stock
                 
-                row.nameLabel.setText(stock.stockName)
-                row.priceLabel.setText("\(stock.price)")
-                //image位置不同方法不同
-                
-                if stock.statusUP == true {
-                    row.image.setImageNamed("arrow_red")
-                    row.priceLabel.setTextColor(UIColor.redColor())
-                }else {
-                    row.image.setImageNamed("arrow_green")
-                    row.priceLabel.setTextColor(UIColor.greenColor())
-                }
+                row.setItem(stock)
             }
         }
     }
