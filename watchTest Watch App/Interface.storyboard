@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14B25" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -10,36 +10,170 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="watchTest_Watch_App" customModuleProvider="target">
                     <items>
-                        <button width="1" height="18" alignment="left" title="刷新" id="i1e-rf-0aw">
-                            <connections>
-                                <action selector="refresh" destination="AgC-eL-Hgc" id="1aD-9Z-jbs"/>
-                            </connections>
-                        </button>
-                        <table alignment="left" layout="vertical" id="Td2-ok-P5a">
+                        <group alignment="center" id="YAt-p5-XyF">
                             <items>
-                                <tableRow identifier="row" id="hdM-6o-rmX" customClass="TableRow" customModule="watchTest_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="Nhn-zZ-mdF">
+                                <label alignment="left" text="我的自选" textAlignment="center" id="nxr-ho-rr8"/>
+                            </items>
+                        </group>
+                        <table alignment="left" id="PLC-mG-JIy">
+                            <items>
+                                <tableRow identifier="row" id="Uix-vO-FF8" customClass="TableRow" customModule="watchTest_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="zUk-zi-4zy">
                                         <items>
-                                            <label alignment="left" verticalAlignment="center" text="Label" textAlignment="left" id="xu7-lL-22Y"/>
-                                            <label alignment="right" verticalAlignment="center" text="Label" id="8zH-zM-3AH"/>
-                                            <imageView width="25" height="25" alignment="right" id="8jR-qb-mY9"/>
+                                            <group width="59" alignment="left" layout="vertical" id="9fx-DT-sUi">
+                                                <items>
+                                                    <label alignment="left" text="名称" id="78V-Vu-V2g">
+                                                        <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                    </label>
+                                                    <label alignment="left" text="600000" id="fl9-gV-vzg">
+                                                        <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                            <label alignment="right" verticalAlignment="center" text="18.89" id="UEe-QZ-TxR"/>
                                         </items>
+                                        <connections>
+                                            <segue destination="DKd-zW-KKS" kind="modal" id="Ul3-lm-7ap"/>
+                                        </connections>
                                     </group>
                                     <connections>
-                                        <outlet property="image" destination="8jR-qb-mY9" id="zfE-n4-SHc"/>
-                                        <outlet property="nameLabel" destination="xu7-lL-22Y" id="mnj-hk-1gy"/>
-                                        <outlet property="priceLabel" destination="8zH-zM-3AH" id="c1x-fM-yfc"/>
+                                        <outlet property="nameLabel" destination="78V-Vu-V2g" id="nI7-hz-n7m"/>
+                                        <outlet property="priceLabel" destination="UEe-QZ-TxR" id="OPC-5F-Mlx"/>
                                     </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <menu key="menu" id="zWj-dD-qhv">
+                        <items>
+                            <menuItem title="最新价" icon="info" id="Mg1-If-wfG"/>
+                            <menuItem title="涨跌幅" icon="accept" id="FTu-HR-XqB"/>
+                            <menuItem title="涨跌额" icon="decline" id="hfS-Cc-zxE"/>
+                            <menuItem title="总市值" icon="play" id="fhc-W6-R6l"/>
+                        </items>
+                    </menu>
                     <connections>
-                        <outlet property="table" destination="Td2-ok-P5a" id="JVI-6B-1SX"/>
+                        <outlet property="table" destination="PLC-mG-JIy" id="A6B-Do-nWx"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-605" y="464"/>
+            <point key="canvasLocation" x="146" y="445"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="QkW-8q-XHe">
+            <objects>
+                <controller id="DKd-zW-KKS">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="gJJ-Sq-9Oh">
+                            <items>
+                                <label alignment="center" text="游族网络(600000)" id="4JJ-df-Cro"/>
+                                <group width="1" widthAdjustment="-4" alignment="center" id="Nmv-jG-BCK">
+                                    <items>
+                                        <label width="1" alignment="left" text="54.31" id="fUY-6s-j8F">
+                                            <fontDescription key="font" type="system" pointSize="26"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" widthAdjustment="-4" alignment="center" id="yHh-Y0-NPs">
+                                    <items>
+                                        <label alignment="left" text="4.56" id="Jqk-db-0g6"/>
+                                        <label alignment="right" text="+10.00%" id="6Mb-CB-v75"/>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="1" widthAdjustment="-4" alignment="center" id="IxO-mO-qmD">
+                            <items>
+                                <label alignment="left" text="今开" id="ZgL-p2-Rf1">
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <label alignment="right" text="54.31" id="ek7-5V-l9Z"/>
+                            </items>
+                        </group>
+                        <group width="1" widthAdjustment="-4" alignment="center" id="WsP-ve-Iwr">
+                            <items>
+                                <label alignment="left" text="昨收" id="AVb-6c-BqE">
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <label alignment="right" text="49.37" id="Zu0-9j-iBc"/>
+                            </items>
+                        </group>
+                        <group width="1" widthAdjustment="-4" alignment="center" id="Jri-BX-dhN">
+                            <items>
+                                <label alignment="left" text="昨收" id="IMO-OY-4h8">
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <label alignment="right" text="49.37" id="p00-xD-9Vx"/>
+                            </items>
+                        </group>
+                        <group width="1" widthAdjustment="-4" alignment="center" id="EOH-RQ-QWJ">
+                            <items>
+                                <label alignment="left" text="最高" id="Whp-FP-Lbu">
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <label alignment="right" text="49.37" id="9L1-9q-ch9"/>
+                            </items>
+                        </group>
+                        <group width="1" widthAdjustment="-4" alignment="center" id="14j-x9-ShD">
+                            <items>
+                                <label alignment="left" text="最低" id="ZT4-4T-6Hr">
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <label alignment="right" text="49.37" id="54o-mf-MB7"/>
+                            </items>
+                        </group>
+                        <group width="1" widthAdjustment="-4" alignment="center" id="33q-MZ-NPE">
+                            <items>
+                                <label alignment="left" text="成交量" id="zyh-6o-Ga9">
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <label alignment="right" text="49.37" id="B34-Mf-9yo"/>
+                            </items>
+                        </group>
+                        <group width="1" widthAdjustment="-4" alignment="center" id="MNl-xe-EwV">
+                            <items>
+                                <label alignment="left" text="成交额" id="p6Y-fh-ONA">
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <label alignment="right" text="49.37" id="ihE-qS-qoC"/>
+                            </items>
+                        </group>
+                        <group width="1" widthAdjustment="-4" alignment="center" id="4YE-Nb-YfT">
+                            <items>
+                                <label alignment="left" text="换手率" id="85L-JK-PfL">
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <label alignment="right" text="49.37" id="9Ln-2C-Fms"/>
+                            </items>
+                        </group>
+                        <group width="1" widthAdjustment="-4" alignment="center" id="icR-iI-fXG">
+                            <items>
+                                <label alignment="left" text="市盈率" id="EBp-1d-MFD">
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <label alignment="right" text="49.37" id="MqK-Rs-JaP"/>
+                            </items>
+                        </group>
+                        <group width="1" widthAdjustment="-4" alignment="center" id="sEY-8g-COY">
+                            <items>
+                                <label alignment="left" text="总市值" id="DNH-Kr-zjB">
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <label alignment="right" text="49.37" id="lZu-CM-KyN"/>
+                            </items>
+                        </group>
+                        <group width="1" widthAdjustment="-4" alignment="center" id="vu7-ep-WZo">
+                            <items>
+                                <label alignment="left" text="流通市值" id="rH3-6h-b3h">
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </label>
+                                <label alignment="right" text="49.37" id="RMZ-oh-y7Z"/>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="458" y="445"/>
         </scene>
     </scenes>
 </document>

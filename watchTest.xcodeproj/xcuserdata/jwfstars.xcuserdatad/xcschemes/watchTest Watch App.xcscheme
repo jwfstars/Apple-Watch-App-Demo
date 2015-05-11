@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "332116CB1A2F23E500B7267E"
+               BlueprintIdentifier = "3395AE651A36CFE700BC0ED6"
                BuildableName = "watchTest Watch App.app"
                BlueprintName = "watchTest Watch App"
-               ReferencedContainer = "container:watchTest.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "332116BE1A2F23E400B7267E"
-               BuildableName = "watchTest WatchKit Extension.appex"
-               BlueprintName = "watchTest WatchKit Extension"
                ReferencedContainer = "container:watchTest.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,6 +34,20 @@
                ReferencedContainer = "container:watchTest.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3395AE5A1A36CFE700BC0ED6"
+               BuildableName = "watchTest WatchKit Extension.appex"
+               BlueprintName = "watchTest WatchKit Extension"
+               ReferencedContainer = "container:watchTest.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -60,7 +60,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "332116CB1A2F23E500B7267E"
+            BlueprintIdentifier = "3395AE651A36CFE700BC0ED6"
             BuildableName = "watchTest Watch App.app"
             BlueprintName = "watchTest Watch App"
             ReferencedContainer = "container:watchTest.xcodeproj">
@@ -82,7 +82,7 @@
          RemotePath = "/watchTest">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "332116CB1A2F23E500B7267E"
+            BlueprintIdentifier = "3395AE651A36CFE700BC0ED6"
             BuildableName = "watchTest Watch App.app"
             BlueprintName = "watchTest Watch App"
             ReferencedContainer = "container:watchTest.xcodeproj">
@@ -91,7 +91,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "332116CB1A2F23E500B7267E"
+            BlueprintIdentifier = "3395AE651A36CFE700BC0ED6"
             BuildableName = "watchTest Watch App.app"
             BlueprintName = "watchTest Watch App"
             ReferencedContainer = "container:watchTest.xcodeproj">
@@ -112,7 +112,7 @@
          RemotePath = "/watchTest">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "332116CB1A2F23E500B7267E"
+            BlueprintIdentifier = "3395AE651A36CFE700BC0ED6"
             BuildableName = "watchTest Watch App.app"
             BlueprintName = "watchTest Watch App"
             ReferencedContainer = "container:watchTest.xcodeproj">
@@ -121,7 +121,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "332116CB1A2F23E500B7267E"
+            BlueprintIdentifier = "3395AE651A36CFE700BC0ED6"
             BuildableName = "watchTest Watch App.app"
             BlueprintName = "watchTest Watch App"
             ReferencedContainer = "container:watchTest.xcodeproj">

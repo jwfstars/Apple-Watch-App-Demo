@@ -36,8 +36,8 @@ class ViewController: UIViewController,UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as StockCell
-        cell.configureCell(self.stockItemArray[indexPath.row] as Stock)
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! StockCell
+        cell.configureCell(self.stockItemArray[indexPath.row] as! Stock)
     
         return cell
     }
@@ -53,7 +53,7 @@ class StockCell : UITableViewCell {
         nameLabel.text = stock.stockName
         priceLabel.text = "\(stock.price)"
         
-        if stock.statusUP == true {
+        if stock.isUP == true {
             priceLabel.textColor = UIColor.redColor()
         }else {
             priceLabel.textColor = UIColor.greenColor()

@@ -14,6 +14,7 @@ public typealias PriceRequestCompletionBlock = (stockItems: NSArray?, error: NSE
 public class DataManager {
    
     let URL = "http://api.money.126.net/data/feed/1000002,1000001,1002069,1000881,0600231,1300231,1300122,1300390,money.api"
+    
     var priceArray = NSMutableArray()
     
     public func requestPrice(completion: PriceRequestCompletionBlock) {
@@ -28,13 +29,13 @@ public class DataManager {
             
             if error == nil {
                 var JSONError: NSError?
-                let responseDict = NSJSONSerialization.JSONObjectWithData(self.filterResponseString(data), options: NSJSONReadingOptions.AllowFragments, error: &JSONError) as NSDictionary
+                let responseDict = NSJSONSerialization.JSONObjectWithData(self.filterResponseString(data), options: NSJSONReadingOptions.AllowFragments, error: &JSONError) as! NSDictionary
                 if JSONError == nil {
                     println(responseDict)
                     
                     for (key,dict) in responseDict {
 
-                        let dic = dict as NSDictionary
+                        let dic = dict as! NSDictionary
                         
                         let stockItem = Stock(dict: dic)
                         
@@ -62,7 +63,7 @@ public class DataManager {
 
     func filterResponseString(data : NSData) -> NSData{
 
-        var string :String = NSString(data:data, encoding: NSUTF8StringEncoding)!
+        var string :String = NSString(data:data, encoding: NSUTF8StringEncoding)! as String
         var array = string.componentsSeparatedByString("(")
         string = array.last!
         array = string.componentsSeparatedByString(")")
@@ -77,8 +78,10 @@ class Stock: NSObject {
     
     var stockName : String = ""
     var price : Double = 0.0
-    var statusUP : Bool = false
+    var isUP : Bool = false
     var updown : Double = 0
+    
+    
     
     init(dict : NSDictionary) {
         super.init()
@@ -86,12 +89,12 @@ class Stock: NSObject {
     }
     
     func configureStock(dict : NSDictionary) {
-        stockName = dict["name"] as String
-        price = dict["price"] as Double
-        updown = dict["updown"] as Double
+        stockName = dict["name"] as! String
+        price = dict["price"] as! Double
+        updown = dict["updown"] as! Double
 
         if updown >= 0 {
-            statusUP = true
+            isUP = true
         }
     }
     

@@ -1,33 +1,34 @@
 //
-//  TableRow.swift
+//  tableRow.swift
 //  watchTest
 //
-//  Created by jwfstars on 14/12/4.
+//  Created by jwfstars on 14/12/9.
 //  Copyright (c) 2014年 jwfstars. All rights reserved.
 //
 
 import UIKit
+import Foundation
 import WatchKit
 
+
 class TableRow: NSObject {
-   
-    @IBOutlet weak var nameLabel: WKInterfaceLabel!
+
     @IBOutlet weak var priceLabel: WKInterfaceLabel!
-    @IBOutlet weak var image: WKInterfaceImage!
+    @IBOutlet weak var nameLabel: WKInterfaceLabel!
     
     
     func setItem(stock : Stock) {
-        
+        priceLabel .setText("\(stock.price)")
         nameLabel.setText(stock.stockName)
-        priceLabel.setText("\(stock.price)")
 
-        //image位置不同方法不同
-        if stock.statusUP == true {
-            image.setImageNamed("arrow_red")
+        if stock.isUP == true {
             priceLabel.setTextColor(UIColor.redColor())
         }else {
-            image.setImageNamed("arrow_green")
             priceLabel.setTextColor(UIColor.greenColor())
         }
+        
+        
     }
 }
+
+
